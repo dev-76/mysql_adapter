@@ -43,23 +43,22 @@ bool MySQLConnectionSync::Ping() {
 
 std::shared_ptr<MySQLResultSet> MySQLConnectionSync::Query(const std::string & sql)
 {
-    if(sql.empty())
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+	if(sql.empty())
+		return nullptr;
     MYSQL_RES* result;
     if(mysql_real_query(m_pMYSQL, sql.c_str(), sql.size())) {
         m_ErrorTrace(FmtStr("MySQLConnectionSync::ExecuteQuery: Error %s when execute query %s", mysql_error(m_pMYSQL), sql));
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+        return nullptr;
     }
     if(!(result = mysql_store_result(m_pMYSQL))) {
         m_ErrorTrace(FmtStr("MySQLConnectionSync::ExecuteQuery: Error when store query result %s", mysql_error(m_pMYSQL)));
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+        return nullptr;
     }
-    std::shared_ptr<MySQLResultSet> resSet = nullptr;
-    resSet = std::make_shared<MySQLResultSet>(*(new MySQLResultSet(result)));
+    std::shared_ptr<MySQLResultSet> resSet = std::make_shared<MySQLResultSet>(*(new MySQLResultSet(result)));
     mysql_free_result(result);
     if(m_LogQueries)
         m_DebugTrace(FmtStr("SQL QUERY: %s", sql));
-    return resSet;
+    return resSet->Empty() ? nullptr : resSet;
 }
 
 unsigned long long MySQLConnectionSync::Execute(const std::string& sql) {
