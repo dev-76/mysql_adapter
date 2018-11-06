@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="src\common_mysql.h" />
+    <ClInclude Include="src\mysql_conn.h" />
+    <ClInclude Include="src\mysql_database.h" />
+    <ClInclude Include="src\mysql_field.h" />
+    <ClInclude Include="src\mysql_result_set.h" />
+    <ClInclude Include="src\mysql_row.h" />
+    <ClInclude Include="mysqlc\mysqlc-addition\config.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc-addition\my_config.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc-addition\mysql_version.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc-addition\mysqld_ername.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc-addition\mysqld_error.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc-addition\sql_state.h">
+      <Filter>mysql_connector\mysql_addition</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\base64.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\decimal.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\errmsg.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\ft_global.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\hash.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\heap.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\keycache.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\lf.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\m_ctype.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\m_string.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_aes.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_alarm.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_alloc.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_atomic.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_attribute.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_base.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_bit.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_bitmap.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_check_opt.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_compare.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_compiler.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_dbug.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_dir.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_getopt.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_global.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_libwrap.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_list.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_md5.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_net.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_nosys.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_pthread.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_rdtsc.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_stacktrace.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_sys.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_time.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_tree.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_uctype.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_user.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\my_xml.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\myisam.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\myisammrg.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\myisampack.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql_com.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql_embed.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql_time.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysys_err.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\password.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\probes_mysql.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\probes_mysql_nodtrace.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\queues.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\rijndael.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\service_versions.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sha1.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sha2.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sql_common.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sslopt-case.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sslopt-longopts.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\sslopt-vars.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\t_ctype.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\thr_alarm.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\thr_lock.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\typelib.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\violite.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\welcome_copyright_notice.h">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\gcc_builtins.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\generic-msvc.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\nolock.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\rwlock.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\solaris.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\atomic\x86-gcc.h">
+      <Filter>mysql_connector\mysqlc\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\client_plugin.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\innodb_priv.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\plugin.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\plugin_audit.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\plugin_auth.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\plugin_auth_common.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\plugin_ftparser.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\service_my_snprintf.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\service_thd_alloc.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\service_thd_wait.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\service_thread_scheduler.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\services.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\thread_pool_priv.h">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\psi\mysql_file.h">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\psi\mysql_thread.h">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\psi\psi.h">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\psi\psi_abi_v1.h">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="mysqlc\mysqlc\mysql\psi\psi_abi_v2.h">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\mysql_conn.cpp" />
+    <ClCompile Include="src\mysql_database.cpp" />
+    <ClCompile Include="src\mysql_field.cpp" />
+    <ClCompile Include="src\mysql_result_set.cpp" />
+    <ClCompile Include="src\mysql_row.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mysql_connector">
+      <UniqueIdentifier>{5a5c8761-eecf-49e6-9758-1671b99ed583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mysql_connector\mysql_addition">
+      <UniqueIdentifier>{357e79bc-03b7-4d68-b1c7-718cb3ca9fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mysql_connector\mysqlc">
+      <UniqueIdentifier>{dc7de01d-5a34-4323-818b-1838a7704c72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mysql_connector\mysqlc\atomic">
+      <UniqueIdentifier>{661810cf-7222-4ef0-a91e-2978e045f726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mysql_connector\mysqlc\mysql">
+      <UniqueIdentifier>{fb33f65c-ee04-4d62-9299-18780bd5c8be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mysql_connector\mysqlc\mysql\psi">
+      <UniqueIdentifier>{e12c0095-a233-4be8-a78c-76189199b58f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="mysqlc\mysqlc\CMakeLists.txt">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mysqlc\mysqlc\mysql.h.pp">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql_version.h.in">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\probes_mysql.d.base">
+      <Filter>mysql_connector\mysqlc</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\client_plugin.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\plugin_audit.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\plugin_auth.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\plugin_ftparser.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\psi\psi_abi_v1.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </None>
+    <None Include="mysqlc\mysqlc\mysql\psi\psi_abi_v2.h.pp">
+      <Filter>mysql_connector\mysqlc\mysql\psi</Filter>
+    </None>
+  </ItemGroup>
+</Project>
