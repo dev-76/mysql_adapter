@@ -43,34 +43,33 @@ bool MySQLConnectionSync::Ping() {
 
 std::shared_ptr<MySQLResultSet> MySQLConnectionSync::Query(const std::string & sql)
 {
-    if(sql.empty())
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+	if(sql.empty())
+		return nullptr;
     MYSQL_RES* result;
-    if(mysql_real_query(m_pMYSQL, sql.c_str(), sql.size())) {
-        m_ErrorTrace(FmtStr("MySQLConnectionSync::ExecuteQuery: Error %s when execute query %s", mysql_error(m_pMYSQL), sql));
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+    if(mysql_real_query(m_pMYSQL, sql.c_str(), (unsigned long)sql.size())) {
+        m_ErrorTrace(FmtStr("MySQLConnectionSync::ExecuteQuery: Error %s when execute query %s", mysql_error(m_pMYSQL), sql.c_str()));
+        return nullptr;
     }
     if(!(result = mysql_store_result(m_pMYSQL))) {
         m_ErrorTrace(FmtStr("MySQLConnectionSync::ExecuteQuery: Error when store query result %s", mysql_error(m_pMYSQL)));
-        return std::make_shared<MySQLResultSet>(*(new MySQLResultSet()));
+        return nullptr;
     }
-    std::shared_ptr<MySQLResultSet> resSet = nullptr;
-    resSet = std::make_shared<MySQLResultSet>(*(new MySQLResultSet(result)));
+    std::shared_ptr<MySQLResultSet> resSet = std::make_shared<MySQLResultSet>(*(new MySQLResultSet(result)));
     mysql_free_result(result);
     if(m_LogQueries)
-        m_DebugTrace(FmtStr("SQL QUERY: %s", sql));
-    return resSet;
+        m_DebugTrace(FmtStr("SQL QUERY: %s", sql.c_str()));
+    return resSet->Empty() ? nullptr : resSet;
 }
 
 unsigned long long MySQLConnectionSync::Execute(const std::string& sql) {
     if(sql.empty())
         return 0ULL;
-    if(mysql_real_query(m_pMYSQL, sql.c_str(), sql.size())) {
-        m_ErrorTrace(FmtStr("CMySQLConnectionSync::Execute: Error %s when execute query %s", mysql_error(m_pMYSQL), sql));
+    if(mysql_real_query(m_pMYSQL, sql.c_str(), (unsigned long)sql.size())) {
+        m_ErrorTrace(FmtStr("CMySQLConnectionSync::Execute: Error %s when execute query %s", mysql_error(m_pMYSQL), sql.c_str()));
         return 0ULL;
     }
     if(m_LogQueries)
-        m_DebugTrace(FmtStr("SQL QUERY: %s", sql));
+        m_DebugTrace(FmtStr("SQL QUERY: %s", sql.c_str()));
     return (unsigned long long)mysql_affected_rows(m_pMYSQL);
 }
 
@@ -91,7 +90,7 @@ unsigned long MySQLConnectionSync::ThreadID() {
 }
 
 void MySQLConnectionSync::EscapeString(char *dest, const char *source, size_t length) {
-    mysql_real_escape_string(m_pMYSQL, dest, source, length);
+    mysql_real_escape_string(m_pMYSQL, dest, source, (unsigned long)length);
 }
 
 MySQLConnectionAsync::MySQLConnectionAsync(const std::string& dbHost, const std::string& dbPort, const std::string& dbUser, const std::string& dbPassword, const std::string& dbName, bool logQueries,
